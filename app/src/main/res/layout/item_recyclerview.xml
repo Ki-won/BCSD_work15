@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+
+            name="post_item"
+            type="com.bcsd.android.postapp.mainmodel.RecyclerViewItem" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/posttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{post_item.title}"
+            tools:text="제목"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/postwords"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/postname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{post_item.name}"
+            tools:text="이 름"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/postwords"
+            app:layout_constraintStart_toEndOf="@id/posttitle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:id="@+id/posttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{post_item.time}"
+            tools:text="00:00"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/postwords"
+            app:layout_constraintStart_toEndOf="@id/postname"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"/>
+
+
+        <TextView
+            android:id="@+id/postwords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{post_item.words}"
+            tools:text="내용들@@@@@@@@@@@@@@@@@@@@@@@@"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posttitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
